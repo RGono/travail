@@ -1,9 +1,10 @@
 <h1>All Tags</h1>
-
-<ul id="tags">
+<% if logged_in? %>
+ <ul id="tags">
   <% @tags.each do |tag| %>
     <li>
       <%= link_to tag.name, tag_path(tag) %>
     </li>
   <% end %>
 </ul>
+<% end %>
